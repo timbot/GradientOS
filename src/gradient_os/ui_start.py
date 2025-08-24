@@ -1356,7 +1356,7 @@ class MainWindow(QMainWindow):
         self.sock.close()
         super().closeEvent(event)
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(description='Robot Arm UI')
     parser.add_argument('--pi-ip', type=str, default='ai-pi.local',
                         help='The IP address of the Raspberry Pi.')
@@ -1420,3 +1420,6 @@ if __name__ == "__main__":
     print('Entering app.exec()')
     sys.exit(app.exec())
     print('App exited') # This won't print if hanging in exec
+
+if __name__ == "__main__":
+    main()
